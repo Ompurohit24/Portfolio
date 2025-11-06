@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Om Purohit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5a4',
+            accent: '#7c3aed',
+            bg: '#0f172a',
+            card: '#0b1220'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          },
+          keyframes: {
+            float: {
+              '0%,100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            hue: {
+              '0%': { filter: 'hue-rotate(0deg)' },
+              '100%': { filter: 'hue-rotate(360deg)' }
+            }
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            hue: 'hue 12s linear infinite'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .blob { position: absolute; inset: -10% -20% auto auto; width: 520px; height: 520px; border-radius: 48%; background: linear-gradient(135deg, rgba(124,58,237,0.45), rgba(14,165,164,0.35)); filter: blur(54px); z-index: -1; animation: hue 14s linear infinite; }
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-bg text-slate-200 font-sans antialiased">
+  <div class="relative overflow-hidden">
+    <div class="blob"></div>
+
+    <!-- NAV -->
+    <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg" > -->
+            <img src="Logo.png" alt="Logo" class="w-11 h-11 rounded-lg text-black"/>
+          <!-- <svg class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" src="Logo.png"><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> -->
+        <!-- </div> -->
+        <div class="leading-tight"> 
+          <div class="text-sm font-semibold">Om Purohit</div>
+          <div class="text-xs text-slate-400 -mt-1">Full Stack developer</div>
+        </div>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+        <a href="Om PurohitResumeNew.pdf" class="ml-4 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-gradient-to-r from-primary/20 to-accent/20 border border-white/5 text-xs">Resume</a>
+      </nav>
+
+      <!-- Social Icons -->
+      <div class="hidden md:flex items-center gap-4 text-xl">
+        <a href="https://github.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:youremail@example.com" class="hover:text-primary transition transform hover:scale-110"><i class="fas fa-envelope"></i></a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-sm text-primary font-medium reveal">hi, i'm</p>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-2 reveal">Om Purohit — <span class="text-accent">Software Engineer</span> & Designer</h1>
+          <p class="mt-6 text-slate-300 max-w-xl reveal">
+          A Master's Student aspiring to be a proficient Full Stack Developer, with a passion for crafting seamless and engaging web experiences. Skilled in both front-end and back-end technologies, I thrive on transforming ideas into functional, user-friendly applications.
+          </p>
+
+          <div class="mt-8 flex gap-3 reveal">
+            <a href="#projects" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-gradient-to-r from-primary to-accent shadow-lg text-black font-semibold">View projects</a>
+            <a href="#contact" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg border border-white/6 text-sm">Get in touch</a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="mt-8 flex gap-6 text-2xl text-slate-400 reveal">
+            <a href="https://github.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:youremail@example.com" class="hover:text-primary transition transform hover:scale-110"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="w-full rounded-2xl overflow-hidden glass border border-white/4 p-4">
+            <img src="om.png" alt="scene" class="w-full h-64 object-cover rounded-xl shadow-lg reveal" />
+          </div>
+          <div class="absolute -bottom-8 -right-6 w-36 h-36 rounded-full bg-gradient-to-br from-accent/40 to-primary/40 shadow-2xl animate-float"></div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="mt-16">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Featured Projects</h2>
+          <a href="#" class="text-sm text-slate-400">See all →</a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="p-4 rounded-2xl glass border border-white/5 reveal">
+            <img class="w-full h-40 object-cover rounded-lg" src="Tech.jpg" alt="project 1">
+            <div class="mt-3">
+              <h3 class="font-semibold text-lg">Hotel Management System</h3>
+              <p class="mt-2 text-sm text-slate-300">Hotel Management System is a desktop Application developed using Java, Swing, MySQL .</p>
+              <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+                <span>Java Swing · MySQL</span>
+                <a class="text-primary" href="https://github.com/Ompurohit24/Hotel-management-system">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-4 rounded-2xl glass border border-white/5 reveal">
+            <img class="w-full h-40 object-cover rounded-lg" src="ML.jpg" alt="project 2">
+            <div class="mt-3">
+              <h3 class="font-semibold text-lg">Student Placement Prediction Using ML</h3>
+              <p class="mt-2 text-sm text-slate-300">A ML Model used to predict Placement based on Student IQ and CGPA</p>
+              <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+                <span>Python · SkLearn · Seaborn · Logistic Regression</span>
+                <a class="text-primary" href="https://github.com/Ompurohit24/Student-Placement-Prediction-using-ML-model">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-4 rounded-2xl glass border border-white/5 reveal">
+            <img class="w-full h-40 object-cover rounded-lg" src="IT.jpg" alt="project 3">
+            <div class="mt-3">
+              <h3 class="font-semibold text-lg">Personal Card</h3>
+              <p class="mt-2 text-sm text-slate-300">A Personal Card built using Html,Css.</p>
+              <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+                <span>HTML · CSS </span>
+                <a class="text-primary" href="https://github.com/Ompurohit24/Personal-card">Repo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="mt-20 grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2 reveal">
+          <h2 class="text-2xl font-bold">About Me</h2>
+          <p class="mt-4 text-slate-300">
+            I'm a passionate Master's student actively pursuing Full-Stack Development. I am focused on building modern web applications, APIs, and interactive UIs while continuously seeking out and mastering new skills, especially in Artificial Intelligence (AI). My mission is to learn how to create technology that enhances creativity and boosts productivity in the real world.
+          </p>
+          <p class="mt-2 text-slate-300">
+            I’ve worked with startups and freelancers across the globe, helping bring concepts to life through code and design.
+            When not coding, I explore AI art and write about software development.
+          </p>
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg bg-card">
+              <div class="text-xs text-slate-400">Experience</div>
+              <div class="mt-1 font-semibold">Fresher  </div>
+            </div>
+            <div class="p-4 rounded-lg bg-card">
+              <div class="text-xs text-slate-400">Skills</div>
+              <div class="mt-1 font-semibold">HTML · CSS · Python · JAVA · JAVASCRIPT · SQL · REACT  ·  TAILWIND CSS </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="p-6 rounded-2xl glass border border-white/5 reveal">
+          <h3 class="font-semibold mb-4">Quick facts</h3>
+          <ul class="space-y-2 text-slate-300 text-sm">
+            <li>📍 Based in INDIA</li>
+            <li>🧠 Enthusiast in AI & UI Automation</li>
+            <li>✍️ Writes about Design & Tech</li>
+            <li>☕ Coffee + Coding = ❤️</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="mt-20 reveal">
+        <h2 class="text-2xl font-bold">Contact Me</h2>
+        <p class="mt-3 text-slate-300">Got an idea or a project? Let’s collaborate — I’m always open to exciting opportunities!</p>
+        <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input class="p-3 rounded-lg bg-card border border-white/5" placeholder="Your name" required />
+          <input class="p-3 rounded-lg bg-card border border-white/5" placeholder="Email" type="email" required />
+          <textarea class="p-3 rounded-lg bg-card border border-white/5 md:col-span-2" rows="4" placeholder="Message" required></textarea>
+          <button type="submit" class="md:col-span-2 px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-accent font-semibold hover:scale-105 transition-transform">Send Message</button>
+        </form>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="mt-20 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-slate-400 gap-4">
+        <p>© 2025. Om Purohit</p>
+        <div class="flex gap-5 text-lg">
+          <a href="https://github.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/" target="_blank" class="hover:text-primary transition transform hover:scale-110"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:youremail@example.com" class="hover:text-primary transition transform hover:scale-110"><i class="fas fa-envelope"></i></a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Reveal animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+      }, { threshold: 0.12 });
+      reveals.forEach(r => io.observe(r));
+    });
+  </script>
+</body>
+</html>
